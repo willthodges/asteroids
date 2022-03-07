@@ -18,6 +18,8 @@ def game_init():
     scores = []
     f = open('highscores.txt', 'r')
     for line in f:
+        if line == '\n':
+            continue
         scores.append(int(line))
     if len(scores) == 0:
         scores.append(0)
