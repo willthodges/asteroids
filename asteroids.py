@@ -16,7 +16,7 @@ def game_init():
     boostRegain = True
 
     scores = []
-    f = open(r'assignments\module 5\data\highscores.txt', 'r')
+    f = open('highscores.txt', 'r')
     for line in f:
         scores.append(int(line))
     if len(scores) == 0:
@@ -247,7 +247,7 @@ def countdown():
 clock.schedule_interval(countdown, 1.0)
  
 def game_over():
-    f = open(r'assignments\module 5\data\highscores.txt', 'a')
+    f = open('highscores.txt', 'a')
     f.write(str(score) + '\n')
     f.close()
     clock.unschedule(asteroid_append)
